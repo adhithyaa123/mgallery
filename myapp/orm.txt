@@ -1,0 +1,55 @@
+ORM Query
+create
+
+\\\\ modelname.objects.create(field1="value1",field2="value2",field3="valuue3)
+
+Movies.objects.create(
+    title="arm",
+    genure="Action",
+    language="malayalam",
+    year="2024",
+    run_time=150
+)
+
+\\\fetching all elements
+
+ORM query for fetching all records=====
+    qs=modelname.objects.all()
+    qs=Movies.objects.all()
+
+
+\\\\\fetching specific records
+
+    qs=modelname.objects.get(id=1)
+
+
+\\\\\   ORM query for fetching a specific records
+
+    qs=modelname.objects.filter(field=value,field2=value)
+
+    comdey_movies=modelname.objects.filter(language="malayalam",genure="action")
+
+
+\\\\updation
+
+    Movies.objects.filter(field=value).update(field=new value,field2=new value)
+
+    Movies
+
+\\\\delete
+
+    Movies.objects.filter(id=2).delete()
+
+
+qs=Movies.objects.filter(run_time__gte=150)
+
+qs=Movies.objects.filter(run_time__gte=150,run_time__lte=200)
+
+    field Lookups
+    __gt
+    __lt
+    __gte
+    __lte
+
+
+
